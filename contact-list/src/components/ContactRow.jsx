@@ -9,6 +9,7 @@ const ContactRow = ({contact}) => {
         </tr>
     )
 }
+
 // Below is how i did it T^T
 // const ContactRow = () => {
 //     return (

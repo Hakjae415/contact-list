@@ -10,7 +10,21 @@ const dummyContacts = [
 
 const ContactList = () => {
     const [contacts, setContacts] = useState(dummyContacts);
+
+    useEffect(() => {
+        const fetchContacts = async() => {
+            try {
+                const response = await fetch("https://jsonplaceholder.typicode.com/users")
+                const data = await response.json()
+                setContacts(data)
+            } catch(err) {
+                console.error(err)
+            }
+        }
+        fetchContacts()
+    }, [])
     console.log("Contacts", contacts)
+    
     return (
         <table>
             <thead>

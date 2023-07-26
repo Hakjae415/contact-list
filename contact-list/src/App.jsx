@@ -3,10 +3,12 @@ import ContactList from './components/ContactList'
 import './App.css'
 
 function App() {
-
+  const [selectedContactId, setSelectedContactId] = useState(null);
 
   return (
-    <>
+    <>{
+      
+    }
       <ContactList/>
     </>
   )
